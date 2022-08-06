@@ -34,39 +34,3 @@ struct Sidebar_Previews: PreviewProvider {
 		Sidebar()
 	}
 }
-
-struct SettingsListView: View {
-	var settingsCategory: Category
-	@ObservedObject var settingsModel: SettingsModel
-	@State private var selectedSetting: Setting?
-	
-	init(settingsCategory: Category) {
-		self.settingsCategory = settingsCategory
-		settingsModel = SettingsModel(with: settingsCategory.name)
-	}
- 
-	var body: some View {
-		List(settingsModel.settings) { setting in
-			NavigationLink(destination: SettingDetailsView(setting: setting),
-						   tag: setting,
-						   selection: $selectedSetting) {
-				HStack {
-					Image(systemName: "gearshape")
-					Text(setting.name)
-				}
-			}
-		}
-		.navigationTitle(settingsCategory.name)
-	}
-}
-
-struct SettingDetailsView: View {
-	var setting: Setting
- 
-	var body: some View {
-		Text(setting.value)
-			.font(.title2)
-			.padding(.horizontal)
-			.navigationTitle(setting.name)
-	}
-}
