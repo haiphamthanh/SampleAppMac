@@ -10,7 +10,14 @@ import SwiftUI
 struct ContentView: View {
 	var body: some View {
 		NavigationView {
-			SidebarMainView()
+			// The first column is the sidebar.
+			Sidebar()
+			
+			// Initial content of the second column.
+			EmptyView()
+			
+			// Initial content for the third column.
+			Text("Select a category of settings in the sidebar.")
 		}.toolbar {
 			ToolbarItem(placement: ToolbarItemPlacement.navigation) {
 				Button {
