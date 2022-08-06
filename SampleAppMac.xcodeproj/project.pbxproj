@@ -14,6 +14,11 @@
 		D3511C11289E738D00371DD8 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C10289E738D00371DD8 /* Sidebar.swift */; };
 		D3511C13289E73FD00371DD8 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C12289E73FD00371DD8 /* SettingsListView.swift */; };
 		D3511C15289E740800371DD8 /* SettingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C14289E740800371DD8 /* SettingDetailsView.swift */; };
+		D3511C17289E749B00371DD8 /* SidebarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C16289E749B00371DD8 /* SidebarMainView.swift */; };
+		D3511C1A289E74D400371DD8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C19289E74D300371DD8 /* Category.swift */; };
+		D3511C1C289E74E600371DD8 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C1B289E74E600371DD8 /* Setting.swift */; };
+		D3511C1E289E74F800371DD8 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C1D289E74F800371DD8 /* SettingsModel.swift */; };
+		D3511C20289E751000371DD8 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C1F289E751000371DD8 /* CategoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		D3511C10289E738D00371DD8 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		D3511C12289E73FD00371DD8 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		D3511C14289E740800371DD8 /* SettingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailsView.swift; sourceTree = "<group>"; };
+		D3511C16289E749B00371DD8 /* SidebarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMainView.swift; sourceTree = "<group>"; };
+		D3511C19289E74D300371DD8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D3511C1B289E74E600371DD8 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		D3511C1D289E74F800371DD8 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		D3511C1F289E751000371DD8 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +89,24 @@
 		D3511C0F289E738D00371DD8 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				D3511C18289E74C800371DD8 /* ViewModel */,
 				D3511C10289E738D00371DD8 /* Sidebar.swift */,
 				D3511C12289E73FD00371DD8 /* SettingsListView.swift */,
 				D3511C14289E740800371DD8 /* SettingDetailsView.swift */,
+				D3511C16289E749B00371DD8 /* SidebarMainView.swift */,
 			);
 			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		D3511C18289E74C800371DD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3511C19289E74D300371DD8 /* Category.swift */,
+				D3511C1B289E74E600371DD8 /* Setting.swift */,
+				D3511C1D289E74F800371DD8 /* SettingsModel.swift */,
+				D3511C1F289E751000371DD8 /* CategoriesModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,11 +179,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3511C1E289E74F800371DD8 /* SettingsModel.swift in Sources */,
 				D3511C15289E740800371DD8 /* SettingDetailsView.swift in Sources */,
 				D3511C03289E737F00371DD8 /* ContentView.swift in Sources */,
+				D3511C17289E749B00371DD8 /* SidebarMainView.swift in Sources */,
 				D3511C13289E73FD00371DD8 /* SettingsListView.swift in Sources */,
+				D3511C20289E751000371DD8 /* CategoriesModel.swift in Sources */,
 				D3511C11289E738D00371DD8 /* Sidebar.swift in Sources */,
 				D3511C01289E737F00371DD8 /* SampleAppMacApp.swift in Sources */,
+				D3511C1C289E74E600371DD8 /* Setting.swift in Sources */,
+				D3511C1A289E74D400371DD8 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
