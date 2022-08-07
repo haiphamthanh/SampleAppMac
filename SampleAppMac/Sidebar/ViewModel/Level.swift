@@ -25,15 +25,15 @@ struct Level3: Identifiable, Hashable {
 	var versions: [Version]
 }
 
-//struct Level4: Identifiable, Hashable {
-//	var id = UUID().uuidString
-//	var versions: [Version]
-//}
-
 struct Version: Identifiable, Hashable {
 	var id = UUID().uuidString
 	var name: String
+	var version: String
 	var values: [String: String]
+	
+	var fullName: String {
+		return "\(name)_\(version)"
+	}
 }
 
 struct Other: Identifiable, Hashable {

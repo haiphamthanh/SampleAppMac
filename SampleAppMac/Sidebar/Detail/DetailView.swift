@@ -22,10 +22,12 @@ struct DetailView: View {
 			Level3View(level2: level2) { level3 in
 				selectedLevel3 = level3
 			}
+			.border(.green)
 			
 			contentView(level3: selectedLevel3)
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 				.background(Color.blue)
+				.border(.green)
 		}
 	}
 	
