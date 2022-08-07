@@ -10,6 +10,12 @@ import Foundation
 struct Level: Identifiable, Hashable {
 	var id = UUID().uuidString
 	var name: String
+	var level2Wrappers: [Level2Wrapper]
+}
+
+struct Level2Wrapper: Identifiable, Hashable {
+	var id = UUID().uuidString
+	var name: String
 	var level2s: [Level2]
 }
 

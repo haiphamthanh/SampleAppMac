@@ -14,33 +14,24 @@ struct Level2View: View {
 	
 	init(level: Level) {
 		self.level = level
-		level2Model = Level2Model(level2s: level.level2s)
+		level2Model = Level2Model(level2Wrappers: level.level2Wrappers)
 	}
- 
+	
 	var body: some View {
-//		TabView {
-//			Text("Bananas 🍌🍌")
-//				.tabItem {
-//					
-//					Image(systemName: "gearshape")
-//					Text(setting.name)
-//				}
-//			Text("Apples 🍏🍏")
-//				.tabItem {
-//					
-//					Image(systemName: "gearshape")
-//					Text(setting.name)
-//				}
-//			Text("Peaches 🍑🍑")
-//		}
-//		.foregroundColor(Color.white)
-//		.tabItem {
-//			
-//			Image(systemName: "gearshape")
-//			Text(setting.name)
-//		}
-		
-		List(level2Model.level2s) { level2 in
+		TabView {
+			ForEach(level2Model.level2Wrappers) { level2Wrapper in
+				contentView(level2Wrapper: level2Wrapper)
+					.tabItem {
+						Image(systemName: "gearshape")
+						Text(level2Wrapper.name)
+					}
+			}
+		}
+	}
+	
+	@ViewBuilder
+	func contentView(level2Wrapper: Level2Wrapper) -> some View {
+		List(level2Wrapper.level2s) { level2 in
 			NavigationLink(destination: DetailView(level2: level2),
 						   tag: level2,
 						   selection: $selectedLevel2) {

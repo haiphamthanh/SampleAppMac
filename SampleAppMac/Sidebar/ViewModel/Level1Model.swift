@@ -23,8 +23,17 @@ class Level1Model: ObservableObject {
 		let level32 = Level3(name: "Level32", versions: vers)
 		let level33 = Level3(name: "Level33", versions: [])
 		
-		let level2 = Level2(name: "Level2", level3s: [level31, level32, level33])
-		let level = Level(name: "level1", level2s: [level2])
-		self.levels = [level]
+		let level21 = Level2(name: "Level21", level3s: [level31, level32, level33])
+		let level22 = Level2(name: "Level22", level3s: [level31, level32, level33])
+		let level23 = Level2(name: "Level23", level3s: [level31, level32, level33])
+		
+		let level2Wrapper1 = Level2Wrapper(name: "Wrapper 01", level2s: [level21, level22, level23])
+		let level2Wrapper2 = Level2Wrapper(name: "Wrapper 02", level2s: [level21])
+		let level2Wrapper3 = Level2Wrapper(name: "Wrapper 03", level2s: [level21, level22])
+		
+		let l1 = Level(name: "Type Level 1", level2Wrappers: [level2Wrapper1, level2Wrapper2, level2Wrapper3])
+		let l2 = Level(name: "Type Level 2", level2Wrappers: [level2Wrapper1, level2Wrapper2])
+		let l3 = Level(name: "Type Level 3", level2Wrappers: [level2Wrapper3])
+		self.levels = [l1, l2, l3]
 	}
 }
