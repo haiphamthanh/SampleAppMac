@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct Sidebar: View {
-	@ObservedObject var settingsCategories = CategoriesModel()
-	@State private var selectedCategory: Category?
+	@ObservedObject var level1Model = Level1Model()
+	@State private var selectedLevel: Level?
 	
 	var body: some View {
-		List(settingsCategories.categories) { category in
+		List(level1Model.levels) { level in
 			NavigationLink(
-				destination: SettingsListView(settingsCategory: category),
-				tag: category,
-				selection: $selectedCategory,
+				destination: Level2View(level: level),
+				tag: level,
+				selection: $selectedLevel,
 				label: {
 					HStack {
 						Image(systemName: "folder")
-						Text(category.name)
+						Text(level.name)
+							.font(.custom("AmericanTypewriter", fixedSize: 14).weight(.regular))
 					}
 				})
 		}
