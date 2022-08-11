@@ -35,7 +35,7 @@ struct Sidebar: View {
 		case .type1:
 			Level2View(level: level)
 		case .type2:
-			Text("Select a category of settings in the sidebar.")
+			FunctionalView()
 		}
 	}
 }

@@ -22,6 +22,7 @@
 		D3511C2E289F56F200371DD8 /* Level4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C2D289F56F200371DD8 /* Level4View.swift */; };
 		D3511C30289F5B9B00371DD8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C2F289F5B9B00371DD8 /* DetailView.swift */; };
 		D3511C33289F72C400371DD8 /* NeumorphicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511C32289F72C400371DD8 /* NeumorphicButtonStyle.swift */; };
+		D3D0C0CA28A5B850007C2E25 /* FunctionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0C0C928A5B850007C2E25 /* FunctionalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D3511C2D289F56F200371DD8 /* Level4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4View.swift; sourceTree = "<group>"; };
 		D3511C2F289F5B9B00371DD8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D3511C32289F72C400371DD8 /* NeumorphicButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyle.swift; sourceTree = "<group>"; };
+		D3D0C0C928A5B850007C2E25 /* FunctionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				D3511C0F289E738D00371DD8 /* Sidebar */,
 				D3511C00289E737F00371DD8 /* SampleAppMacApp.swift */,
 				D3511C02289E737F00371DD8 /* ContentView.swift */,
+				D3D0C0C928A5B850007C2E25 /* FunctionalView.swift */,
 				D3511C04289E737F00371DD8 /* Assets.xcassets */,
 				D3511C09289E737F00371DD8 /* SampleAppMac.entitlements */,
 				D3511C06289E737F00371DD8 /* Preview Content */,
@@ -204,6 +207,7 @@
 				D3511C1E289E74F800371DD8 /* Level2Model.swift in Sources */,
 				D3511C24289F508D00371DD8 /* Level3Model.swift in Sources */,
 				D3511C03289E737F00371DD8 /* ContentView.swift in Sources */,
+				D3D0C0CA28A5B850007C2E25 /* FunctionalView.swift in Sources */,
 				D3511C13289E73FD00371DD8 /* Level2View.swift in Sources */,
 				D3511C20289E751000371DD8 /* Level1Model.swift in Sources */,
 				D3511C11289E738D00371DD8 /* Sidebar.swift in Sources */,
