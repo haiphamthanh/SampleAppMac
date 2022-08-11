@@ -14,7 +14,7 @@ struct Sidebar: View {
 	var body: some View {
 		List(level1Model.levels) { level in
 			NavigationLink(
-				destination: Level2View(level: level),
+				destination: viewOnType(level),
 				tag: level,
 				selection: $selectedLevel,
 				label: {
@@ -28,10 +28,20 @@ struct Sidebar: View {
 		.listStyle(SidebarListStyle())
 		.frame(minWidth: 200)
 	}
-}
-
-struct Sidebar_Previews: PreviewProvider {
-	static var previews: some View {
-		Sidebar()
+	
+	@ViewBuilder
+	func viewOnType(_ level: Level) -> some View {
+		switch level.type {
+		case .type1:
+			Level2View(level: level)
+		case .type2:
+			Text("Select a category of settings in the sidebar.")
+		}
 	}
 }
+
+//struct Sidebar_Previews: PreviewProvider {
+//	static var previews: some View {
+//		Sidebar()
+//	}
+//}

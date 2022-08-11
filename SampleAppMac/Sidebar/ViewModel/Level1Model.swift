@@ -31,9 +31,9 @@ class Level1Model: ObservableObject {
 		let level2Wrapper2 = Level2Wrapper(name: "Wrapper 02", level2s: [level21])
 		let level2Wrapper3 = Level2Wrapper(name: "Wrapper 03", level2s: [level21, level22])
 		
-		let l1 = Level(name: "Type Level 1", level2Wrappers: [level2Wrapper1, level2Wrapper2, level2Wrapper3])
-		let l2 = Level(name: "Type Level 2", level2Wrappers: [level2Wrapper1, level2Wrapper2])
-		let l3 = Level(name: "Type Level 3", level2Wrappers: [level2Wrapper3])
+		let l1 = Level(name: "Type Level 1", level2Wrappers: [level2Wrapper1, level2Wrapper2, level2Wrapper3], type: .type1)
+		let l2 = Level(name: "Type Level 2", level2Wrappers: [level2Wrapper1, level2Wrapper2], type: .type1)
+		let l3 = Level(name: "Type Level 3", level2Wrappers: [level2Wrapper3], type: .type2)
 		self.levels = [l1, l2, l3]
 	}
 }

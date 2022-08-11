@@ -7,10 +7,16 @@
 
 import Foundation
 
+enum SampleType {
+	case type1
+	case type2
+}
+
 struct Level: Identifiable, Hashable {
 	var id = UUID().uuidString
 	var name: String
 	var level2Wrappers: [Level2Wrapper]
+	let type: SampleType
 }
 
 struct Level2Wrapper: Identifiable, Hashable {
